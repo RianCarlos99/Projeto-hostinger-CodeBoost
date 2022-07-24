@@ -1,0 +1,83 @@
+.s-hero {
+  margin-top: 11.9rem;
+  background-color: $purple;
+  padding: 1.9rem;
+
+  .container {
+    @include flex(row, flex-start, space-between);
+    .text {
+      max-width: 55rem;
+      p {
+        margin-top: 1.6rem;
+        width: 100%;
+        max-width: 48.8rem;
+        line-height: 150%;
+        font-size: 1.8rem;
+      }
+    
+      button {
+        margin-top: 3.2rem;
+      }
+      
+      .conheca {
+        @include flex(row, center, flex-start);
+        margin-top: 8.6rem;
+        gap: 1.6rem;
+
+        .icon { 
+          img {
+            background-color: rgba(124, 90, 186, 0.4);
+            padding: 0.9rem;
+            border-radius: 0.4rem;
+            animation: vertical-animate 1.5s infinite alternate;
+          }
+        }
+        
+        span {
+          font-weight: bold;
+          line-height: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      top: 3.4rem;
+  
+    }
+    
+    @include responsive (991px) {
+      @include flex(column, flex-start, center);
+      
+      .text {
+        max-width: 100%;
+        h1 {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+          max-width: 100%;
+        }
+        
+        button {
+          display: block;
+          margin: 3.2rem auto;
+        }
+
+        .conheca {
+          justify-content: center;
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+  
+  @include responsive (480px) {
+    margin-top: 8rem;
+  }
+}
+
+
